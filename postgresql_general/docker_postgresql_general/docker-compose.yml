@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 5433:5433
+    env_file:
+      - ./.env
+    container_name: general_test
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8081
+    container_name: adminer
